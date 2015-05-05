@@ -1,0 +1,22 @@
+{
+  "name": "assembleio-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webercoder/assembleio-blog"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webercoder/assembleio-blog/issues"
+  },
+  "homepage": "https://github.com/webercoder/assembleio-blog",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
