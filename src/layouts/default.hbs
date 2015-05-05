@@ -6,8 +6,21 @@
         <meta name="viewport" content="initial-scale=1.0">
     </head>
     <body>
-        {{#markdown}}
-            {{>body}}
-        {{/markdown}}
+
+{{#markdown}}
+
+# {{title}}
+
+{{#if created}}
+*Posted: {{created}}
+{{#if updated}}
+<br>Updated: {{updated}}
+{{/if}}*
+{{/if}}
+
+{{>body}}
+
+{{/markdown}}
+
     </body>
 </html>
