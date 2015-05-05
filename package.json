@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/webercoder/assembleio-blog",
   "devDependencies": {
+    "assemble": "^0.4.42",
     "grunt": "^0.4.5"
   }
 }

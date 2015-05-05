@@ -5,7 +5,20 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         // Tasks here
-        assemble: {},
+        assemble: {
+            options: {
+                layout: 'default.hbs',
+                layoutdir: './src/layouts/'
+            },
+            blog: {
+                files: [{
+                    cwd: './src/content',
+                    dest: './build/',
+                    expand: true,
+                    src: ['**/*.md']
+                }]
+            }
+        },
 
     });
 
