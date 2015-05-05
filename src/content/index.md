@@ -1,5 +1,19 @@
 ---
-title: Home
+title: "Home"
+exclude: true
 ---
 
-This is the home page of my blog. I hope you enjoy it!
+{{/markdown}}
+
+<ul>
+{{#withSort pages "data.created" dir="desc"}}
+	{{#unless data.exclude}}
+		<li>
+			<a href="posts/{{basename}}.html">{{data.title}}</a>
+			({{data.created}})
+		</li>
+	{{/unless}}
+{{/withSort}}
+</ul>
+
+{{#markdown}}
