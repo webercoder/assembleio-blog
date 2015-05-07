@@ -8,7 +8,8 @@ module.exports = function(grunt) {
         assemble: {
             options: {
                 layout: 'default.hbs',
-                layoutdir: './src/layouts/'
+                layoutdir: './src/layouts/',
+                partials: './src/layouts/partials/**/*.hbs'
             },
             blog: {
                 files: [{
@@ -18,7 +19,7 @@ module.exports = function(grunt) {
                     src: ['**/*.md']
                 }]
             }
-        },
+        }
 
     });
 
