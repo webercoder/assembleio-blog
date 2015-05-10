@@ -16,7 +16,7 @@ module.exports = function(grunt) {
                     cwd: './src/content',
                     dest: './build/',
                     expand: true,
-                    src: ['**/*.md']
+                    src: ['**/*.md', '**/*.hbs']
                 }]
             }
         }
