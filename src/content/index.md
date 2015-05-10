@@ -1,9 +1,10 @@
 ---
-title: "Home"
+title: "Welcome to My Blog"
+layout: page.hbs
 exclude: true
 ---
 
-{{/markdown}}
+<h1>{{title}}</h1>
 
 <ul>
 {{#withSort pages "data.created" dir="desc"}}
@@ -15,5 +16,3 @@ exclude: true
 	{{/unless}}
 {{/withSort}}
 </ul>
-
-{{#markdown}}
