@@ -6,13 +6,18 @@ exclude: true
 
 <h1>{{title}}</h1>
 
-<ul>
-{{#withSort pages "data.created" dir="desc"}}
-	{{#unless data.exclude}}
-		<li>
-			<a href="posts/{{basename}}.html">{{data.title}}</a>
-			({{data.created}})
-		</li>
-	{{/unless}}
-{{/withSort}}
-</ul>
+<h2>Latest Entry</h2>
+<article>
+	{{#getLatestEntries pages 1}}
+		<h3><a href="posts/{{basename}}.html">{{data.title}}</a></h3>
+		<p>
+			<em>{{data.created}}</em>
+		</p>
+		<p>
+			{{data.summary}}
+			<a href="posts/{{basename}}.html">Read More</a>
+		</p>
+	{{/getLatestEntries}}
+</article>
+
+<p><a href="blog.html">View All Posts</a></p>

@@ -9,7 +9,8 @@ module.exports = function(grunt) {
             options: {
                 layout: 'default.hbs',
                 layoutdir: './src/layouts/',
-                partials: './src/layouts/partials/**/*.hbs'
+                partials: './src/layouts/partials/**/*.hbs',
+                helpers: './src/helpers/**/*.js'
             },
             blog: {
                 files: [{
