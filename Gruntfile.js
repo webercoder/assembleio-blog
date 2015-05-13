@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-    "use strict";
+    'use strict';
 
     grunt.initConfig({
 
@@ -20,14 +20,29 @@ module.exports = function(grunt) {
                     src: ['**/*.md', '**/*.hbs']
                 }]
             }
+        },
+
+        copy: {
+          'static-assets': {
+            files: [{
+              expand: true,
+              src: [
+                './**/*'
+              ],
+              dest: 'build/',
+              filter: 'isFile',
+              cwd: 'src/static/'
+            }]
+          }
         }
 
     });
 
     // Load plugins for the above tasks
     grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // The default task or other custom tasks
-    grunt.registerTask("default", ["assemble"]);
+    grunt.registerTask('default', ['assemble', 'copy']);
 
 };
